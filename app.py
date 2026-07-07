@@ -40,9 +40,9 @@ with col1:
         width=250,
         height=250,    
     )
-    st.header(':dizzy: Si ta p[rdorim')
-    st.subheader("Plotëso të dhënat në formular dhe pastaj kliko butoni dhe të paraqitet rezultati.").
-    s.subheader('Te dhenat ruhen ne Mongodb dhe aplikacioni është deployed me streamlit.')
+    st.header(':dizzy: Si ta përdorim')
+    st.write("Plotëso të dhënat në formular dhe pastaj kliko butoni dhe të paraqitet rezultati.")
+    st.write('Te dhenat ruhen ne Mongodb dhe aplikacioni është deployed me streamlit.')
 
 with col2:
     # Te dhenat per perdoruesin
