@@ -24,7 +24,8 @@ except Exception as e:
 
 
 # Dizajnimi i faqes
-st.title("BMI Calc")
+#st.title("BMI Calc")
+st.title(":orange[:material/checklist:] BMI Calc")
 st.title("Body Mass Index - Kalkulatori për llogaritjen e peshës ideale")
 
 # Show an image
@@ -38,22 +39,21 @@ collection = db["users"]
 
 # Columns
 col1, col2 = st.columns(2)
-
 with col1:
     with st.echo("below"):
         value = streamlit_image_coordinates(
-            "bg.jpeg",
+            "https://cdn-icons-png.flaticon.com/256/10476/10476467.png",
             width=250,
-            key="local2",
+            height=250,
+            key="url",
         )
-
-        st.write(value)
+    st.write('\nSi ta perdorim')
 
 with col2:
     # Te dhenat per perdoruesin
     emri = st.text_input("Emri")
     mbiemri = st.text_input("Mbiemri")
-    mosha = st.number_input("Mosha")
+    mosha = st.text_input("Mosha")
 
     # Gjinia
     gjinia = st.selectbox('Gjinia', ['Mashkull', 'Femër'])
@@ -67,10 +67,10 @@ with col2:
     # Data
     # Date range input
     start_date = datetime.date(2026, 7, 8)
-    date_range = st.date_input("Dita kur jeni peshuar per here te fundit", (start_date))
-    st.write(f"Start date: {date_range}")
+    date_range = st.date_input("Dita/Data", (start_date))
 
+    bmi = pesha / ((gjatesia/100)**2)
 
-
-    if st.button('Click Me'):
-        st.write("Button clicked!")
+    if st.button('Llogarit dhe ruaj'):
+        st.title(f":muscle:BMI: {round(bmi,2)}")
+        
