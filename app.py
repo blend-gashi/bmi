@@ -66,6 +66,9 @@ with col2:
     bmi = pesha / ((gjatesia/100)**2)
 
     if st.button('Llogarit dhe ruaj'):
+        st.write(f'Emri: {emri}.')
+        st.write(f'Pesha: {pesha}.')
+        st.write(f'Gjatesia:{gjatesia}')
         st.title(f":muscle:BMI: {round(bmi,2)}")
         collection.insert_one({
             "emri": emri,
@@ -74,5 +77,5 @@ with col2:
             "pesha":pesha,
             "gjatesia":gjatesia,
             "bmi":bmi,
-            "data":date
+            "data":str(date)
         })
