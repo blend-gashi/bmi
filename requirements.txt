@@ -1,1 +1,2 @@
 pymongo
+streamlit_image_coordinates
